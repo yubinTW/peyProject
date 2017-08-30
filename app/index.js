@@ -17,6 +17,7 @@ import eaterPersona4 from '../Components/eaterPersonal4';
 import eaterPersona5 from '../Components/eaterPersonal5';
 
 import Icon from 'react-native-vector-icons/Ionicons';
+import StoreInfo from '../Components/storeinfo';
 
 const App = () => {
 
@@ -56,31 +57,40 @@ const App = () => {
         />
       </Scene>
       </Tabs>
-      <Scene title='吃貨個人地圖'>
-        <Scene key="key4" hideNavBar icon={TabIcon}
+      <Scene>
+        <Scene key="key4" icon={TabIcon}
           component={eaterPersonal}
+          hideNavBar
         />
       </Scene>
-      <Scene title='吃貨個人地圖'>
-        <Scene key="key5" hideNavBar icon={TabIcon}
+      <Scene>
+        <Scene key="key5" icon={TabIcon}
           component={eaterPersona2}
+          hideNavBar
         />
       </Scene>
-      <Scene title='吃貨個人地圖'>
-        <Scene key="key6" hideNavBar icon={TabIcon}
+      <Scene>
+        <Scene key="key6" icon={TabIcon}
           component={eaterPersona3}
+          hideNavBar
         />
       </Scene>
-      <Scene title='吃貨個人地圖'>
-        <Scene key="key7" hideNavBar icon={TabIcon}
+      <Scene>
+        <Scene key="key7" icon={TabIcon}
           component={eaterPersona4}
+          hideNavBar
         />
       </Scene>
-      <Scene title='吃貨個人地圖'>
-        <Scene key="key8" hideNavBar icon={TabIcon}
+      <Scene>
+        <Scene key="key8"  icon={TabIcon}
           component={eaterPersona5}
+          hideNavBar
         />
       </Scene>
+      <Scene key='storeinfo'
+        component={StoreInfo}
+        hideNavBar={false}
+      />
     </Scene>
   </Router>
   );
