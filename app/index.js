@@ -10,7 +10,7 @@ import Location from '../Components/location';
 import Store from '../Components/store';
 import Personal from '../Components/personal';
 
-import eaterPersonall from '../Components/eaterPersonal1';
+import eaterPersonal1 from '../Components/eaterPersonal1';
 import eaterPersonal2 from '../Components/eaterPersonal2';
 import eaterPersonal3 from '../Components/eaterPersonal3';
 import eaterPersonal4 from '../Components/eaterPersonal4';
@@ -59,31 +59,31 @@ const App = () => {
       </Tabs>
       <Scene>
         <Scene key="key4" icon={TabIcon}
-          component={eaterPersonal}
+          component={eaterPersonal1}
           hideNavBar
         />
       </Scene>
       <Scene>
         <Scene key="key5" icon={TabIcon}
-          component={eaterPersona2}
+          component={eaterPersonal2}
           hideNavBar
         />
       </Scene>
       <Scene>
         <Scene key="key6" icon={TabIcon}
-          component={eaterPersona3}
+          component={eaterPersonal3}
           hideNavBar
         />
       </Scene>
       <Scene>
         <Scene key="key7" icon={TabIcon}
-          component={eaterPersona4}
+          component={eaterPersonal4}
           hideNavBar
         />
       </Scene>
       <Scene>
         <Scene key="key8"  icon={TabIcon}
-          component={eaterPersona5}
+          component={eaterPersonal5}
           hideNavBar
         />
       </Scene>
