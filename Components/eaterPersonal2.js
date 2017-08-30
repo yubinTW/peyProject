@@ -175,7 +175,7 @@ var styles = StyleSheet.create({
     listView:{
        backgroundColor: '#000000',
        
-       height:370
+       height:390
        
     },
    

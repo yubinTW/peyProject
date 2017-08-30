@@ -10,6 +10,7 @@ import {
     Image,
     Button,
     ListView,
+    ScrollView
   } from 'react-native';
   import { Actions } from 'react-native-router-flux';
   import  Search  from 'react-native-search-box';
@@ -27,10 +28,12 @@ import {
 
     render(){
         return(
-            <View>
+            <View 
+            style={{flex:1}}
+            >
                 <Search 
                 />
-                
+                <ScrollView>
                 <TouchableOpacity style={styles.container} onPress={this.props.onPress}>
                     <View style={styles.imageStyle}>
                         <Image
@@ -95,8 +98,7 @@ import {
                         <Text style={styles.baseText}>台中市中區中山路20號</Text>   
                     </View>
                 </TouchableOpacity>
-                
-                
+                </ScrollView>
                 
             </View>
         );
