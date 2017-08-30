@@ -10,6 +10,14 @@ import Location from '../Components/location';
 import Store from '../Components/store';
 import Personal from '../Components/personal';
 
+import Icon from 'react-native-vector-icons/Ionicons';
+
+const StoreIcon = ({ selected, title }) => {
+  if(selected)
+    return(<Icon name="ios-restaurant" size={40} color='red' />);
+  else
+    return (<Icon name="ios-restaurant" size={40} color='gray' />);
+}
 
 const App = () => {
 
@@ -21,22 +29,30 @@ const App = () => {
       />
       <Tabs key="tabbar" hideNavBar tabs tabBarStyle={styles.tabBarStyle} activeBackgroundColor="#ddd">
       <Scene title='店家'>  
-        <Scene initial key="key0" hideNavBar icon={TabIcon}
-            component = {Store}
+        <Scene initial key="key0" hideNavBar 
+          name='ios-restaurant'
+          icon={TabIcon}
+          component = {Store}
         />
       </Scene>
       <Scene title='地點'>  
-        <Scene key="location"hideNavBar icon={TabIcon}
+        <Scene key="key1" hideNavBar 
+            name='ios-map'
+            icon={TabIcon}
             component={Location}
         />
       </Scene> 
       <Scene title='吃貨'>  
-        <Scene key="Eater"hideNavBar icon={TabIcon}
+        <Scene key="key2" hideNavBar 
+            name='ios-people'
+            icon={TabIcon}
             component={Eater}
         />
       </Scene>
       <Scene title='個人'>
-        <Scene key="Personal" hideNavBar icon={TabIcon}
+        <Scene key="key3" hideNavBar 
+          name='ios-person'
+          icon={TabIcon}
           component={Personal}
         />
       </Scene>
