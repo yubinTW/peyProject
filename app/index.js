@@ -10,11 +10,11 @@ import Location from '../Components/location';
 import Store from '../Components/store';
 import Personal from '../Components/personal';
 
-import eaterPersonal from '../Components/eaterPersonal1';
-import eaterPersona2 from '../Components/eaterPersonal2';
-import eaterPersona3 from '../Components/eaterPersonal3';
-import eaterPersona4 from '../Components/eaterPersonal4';
-import eaterPersona5 from '../Components/eaterPersonal5';
+import eaterPersonall from '../Components/eaterPersonal1';
+import eaterPersonal2 from '../Components/eaterPersonal2';
+import eaterPersonal3 from '../Components/eaterPersonal3';
+import eaterPersonal4 from '../Components/eaterPersonal4';
+import eaterPersonal5 from '../Components/eaterPersonal5';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 import StoreInfo from '../Components/storeinfo';
