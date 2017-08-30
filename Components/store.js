@@ -16,7 +16,12 @@ import {
   import  Search  from 'react-native-search-box';
 
   const infoData = [
-    {title:'蘇格貓底',address:'300新竹市東區光復路二段101號',_type:'咖啡館', star:'4.2', cost:'中低價(NT100~199 /人)', phone:'03 573 6096',time:'ㄧ~日 11:00~21:00', pic:'https://media-cdn.tripadvisor.com/media/photo-s/0a/7b/7b/c6/restaurant-view.jpg'},
+    {title:'偈亭泡菜鍋',address:'台中市北區雙十路一段89號',_type:'火鍋店', star:'4.3', cost:'中低價(NT100~199 /人)', phone:'04 2225 9397',time:'ㄧ~日 11:30~23:00', pic:'https://cf-zineblog.zi.org.tw/wp-content/uploads/2017/07/1499876164-3fda5e5473eea839d1ca51fffad9b0d7.jpg'},
+    {title:'咖啡鑽',address:'台中市東區振興路2-6號',_type:'咖啡廳', star:'3.5', cost:'中低價(NT100~199 /人)', phone:'04 2229 7210',time:'歇業中', pic:'http://blogwww.s3.amazonaws.com/Blogfiles/1998/465772.jpg'},
+    {title:'朴大哥的韓式炸雞',address:'台中市北區三民路三段60號',_type:'韓國餐廳', star:'3.8', cost:'中低價(NT100~199 /人)', phone:'04 2229 6551',time:'三~一 17:00~02:00', pic:'http://pic.pimg.tw/ashinjo/1415083850-3429951509.jpg'},
+    {title:'混HUN',address:'台中市北區三民路三段114號',_type:'餐廳', star:'4.0', cost:'中低價(NT100~199 /人)', phone:'04 2223 1080',time:'ㄧ~日 11:30~22:00', pic:'https://farm4.staticflickr.com/3899/15102968170_3db7817757_c.jpg'},
+    {title:'宮原眼科',address:'台中市中區中山路20號',_type:'甜點專賣店', star:'4.1', cost:'中低價(NT100~199 /人)', phone:'04 2227 1927',time:'ㄧ~日 10:00~22:00', pic:'https://pic.pimg.tw/standinghere/1443326378-3173397776.jpg'},
+    {title:'好迷咖啡',address:'台中市西區台灣大道二段216號',_type:'咖啡館', star:'4.2', cost:'中低價(NT100~199 /人)', phone:'04 2310 1250',time:'ㄧ~六 09:00~20:00', pic:'http://pic.pimg.tw/missieat/1382083234-4089121509_n.jpg'},
 
   ];
 
@@ -33,7 +38,7 @@ import {
             {key:'5', title:'好迷咖啡', address:'403台中市西區台灣大道二段216號', pic:'http://pic.pimg.tw/bio01234/1379779860-4250275013.jpg'},
         
             
-          ]
+        ]
     }
 
     constructor(props) {

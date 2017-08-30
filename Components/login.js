@@ -12,33 +12,66 @@ import {
   } from 'react-native';
   import { Actions } from 'react-native-router-flux';
 
+const styles = StyleSheet.create({
+    pic:{
+        height: 300,
+    },
+    title:{
+        fontSize: 20,
+        fontWeight: 'bold',
+        fontFamily: '微軟正黑體',
+        marginLeft: 20
+    },
+    text:{
+        fontSize: 20,
+        fontFamily: '微軟正黑體',
+        marginLeft: 20
+    },
+    separator: {
+        height: 1,
+        backgroundColor: '#333'
+    },
+})
+
 export default class Login extends React.Component{
 
     login = ()=>{
-        console.log('user login');
         Actions.key0();
         
     }
     render(){
         return(
-            <View>
+            <View style={{
+                
+                alignItems: 'center'}}>
                 <Image
-                source={{uri:'https://s-media-cache-ak0.pinimg.com/originals/9c/79/da/9c79da558e9d7a47afcd57837709885c.jpg'}} 
-                style={{width: 300, height: 300}}
+                source={require('../img/peyLOGO.png')} 
+                style={{
+                    top: 30,
+                    height:300,
+                    width: 180,
+                    
+                }}
                 />
-                <TextInput 
-                onChangeText={(text) => this.setState({text})}
-                placeholder="email"
-                />
-                <TextInput 
-                onChangeText={(text) => this.setState({text})}
-                placeholder="password"
-                />
-                <Button
-                    onPress={this.login}
-                    title="Sign In"
-                >
-                </Button>
+                <View style={{marginTop: 20, width:220}}>
+                    <TextInput 
+                    onChangeText={(text) => this.setState({text})}
+                    placeholder="email"
+                    />
+                    <View style={styles.separator} />
+                    <TextInput 
+                    onChangeText={(text) => this.setState({text})}
+                    placeholder="password"
+                    />
+                    <View style={styles.separator} />
+                    <View style={{height:50}} />
+                    <Button
+                        style={{borderRadius:30, borderWidth:1}}
+                        onPress={this.login}
+                        title="Sign In"
+                    >
+                    </Button>
+                </View>
             </View>
         );
     }

@@ -109,7 +109,8 @@ import {
     }
 
     logout = ()=>{
-        alert('掰');
+        alert('掰','title');
+        Actions.login();
     }
     
     eat(user1) {

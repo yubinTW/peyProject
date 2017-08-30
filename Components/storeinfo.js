@@ -15,7 +15,6 @@ import {
 import { Actions } from 'react-native-router-flux';
 import  Search  from 'react-native-search-box';
 
-
 const styles = StyleSheet.create({
     pic:{
         height: 300,
