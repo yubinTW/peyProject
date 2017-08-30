@@ -9,11 +9,23 @@ import Eater from '../Components/eater';
 import Location from '../Components/location';
 import Store from '../Components/store';
 import Personal from '../Components/personal';
+<<<<<<< HEAD
 import eaterPersonal from '../Components/eaterPersonal1';
 import eaterPersona2 from '../Components/eaterPersonal2';
 import eaterPersona3 from '../Components/eaterPersonal3';
 import eaterPersona4 from '../Components/eaterPersonal4';
 import eaterPersona5 from '../Components/eaterPersonal5';
+=======
+
+import Icon from 'react-native-vector-icons/Ionicons';
+
+const StoreIcon = ({ selected, title }) => {
+  if(selected)
+    return(<Icon name="ios-restaurant" size={40} color='red' />);
+  else
+    return (<Icon name="ios-restaurant" size={40} color='gray' />);
+}
+>>>>>>> yubin
 
 const App = () => {
 
@@ -25,22 +37,42 @@ const App = () => {
       />
       <Tabs key="tabbar" hideNavBar tabs tabBarStyle={styles.tabBarStyle} activeBackgroundColor="#ddd">
       <Scene title='店家'>  
-        <Scene initial key="key0" hideNavBar icon={TabIcon}
-            component = {Store}
+        <Scene initial key="key0" hideNavBar 
+          name='ios-restaurant'
+          icon={TabIcon}
+          component = {Store}
         />
       </Scene>
       <Scene title='地點'>  
+<<<<<<< HEAD
         <Scene key="key1"hideNavBar icon={TabIcon}
+=======
+        <Scene key="key1" hideNavBar 
+            name='ios-map'
+            icon={TabIcon}
+>>>>>>> yubin
             component={Location}
         />
       </Scene> 
       <Scene title='吃貨'>  
+<<<<<<< HEAD
         <Scene key="key2"hideNavBar icon={TabIcon}
+=======
+        <Scene key="key2" hideNavBar 
+            name='ios-people'
+            icon={TabIcon}
+>>>>>>> yubin
             component={Eater}
         />
       </Scene>
       <Scene title='個人'>
+<<<<<<< HEAD
         <Scene key="key3" hideNavBar icon={TabIcon}
+=======
+        <Scene key="key3" hideNavBar 
+          name='ios-person'
+          icon={TabIcon}
+>>>>>>> yubin
           component={Personal}
         />
       </Scene>

@@ -4,6 +4,7 @@ import React, {
   import {
     Text,
   } from 'react-native';
+  import Icon from 'react-native-vector-icons/Ionicons';
   
   const propTypes = {
     selected: PropTypes.bool,
@@ -11,10 +12,9 @@ import React, {
   };
   
   const TabIcon = (props) => {
-    return <Text
-      style={{ color: props.focused ? 'red' : 'black' }}
-    >{props.title}
-    </Text>
+    return (
+    <Icon name={props.name} size={40} color={props.focused ? 'red' : 'gray'} />
+    )
   };
   
   TabIcon.propTypes = propTypes;
