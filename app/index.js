@@ -9,12 +9,14 @@ import Eater from '../Components/eater';
 import Location from '../Components/location';
 import Store from '../Components/store';
 import Personal from '../Components/personal';
+
 import eaterPersonall from '../Components/eaterPersonal1';
 import eaterPersonal2 from '../Components/eaterPersonal2';
 import eaterPersonal3 from '../Components/eaterPersonal3';
 import eaterPersonal4 from '../Components/eaterPersonal4';
 import eaterPersonal5 from '../Components/eaterPersonal5';
 
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const App = () => {
 
@@ -26,22 +28,30 @@ const App = () => {
       />
       <Tabs key="tabbar" hideNavBar tabs tabBarStyle={styles.tabBarStyle} activeBackgroundColor="#ddd">
       <Scene title='店家'>  
-        <Scene initial key="key0" hideNavBar icon={TabIcon}
-            component = {Store}
+        <Scene initial key="key0" hideNavBar 
+          name='ios-restaurant'
+          icon={TabIcon}
+          component = {Store}
         />
       </Scene>
       <Scene title='地點'>  
-        <Scene key="key1"hideNavBar icon={TabIcon}
+        <Scene key="key1" hideNavBar 
+            name='ios-map'
+            icon={TabIcon}
             component={Location}
         />
       </Scene> 
       <Scene title='吃貨'>  
-        <Scene key="key2"hideNavBar icon={TabIcon}
+        <Scene key="key2" hideNavBar 
+            name='ios-people'
+            icon={TabIcon}
             component={Eater}
         />
       </Scene>
       <Scene title='個人'>
-        <Scene key="key3" hideNavBar icon={TabIcon}
+        <Scene key="key3" hideNavBar 
+          name='ios-person'
+          icon={TabIcon}
           component={Personal}
         />
       </Scene>
