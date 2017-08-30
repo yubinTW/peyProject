@@ -94,7 +94,7 @@ import {
                         source={{uri:'https://ppt.cc/fVByIx@.jpg'}}   
                 />
                <View style={styles.rightContainer1}>
-                        <Text style={styles.name}>小明</Text>
+                        <Text style={styles.name}>apple</Text>
                         <Text style={styles.level}>吃貨</Text>
                 </View>
                 </View>
@@ -173,7 +173,7 @@ var styles = StyleSheet.create({
     listView:{
        backgroundColor: '#000000',
        
-       height:370
+       height:390
        
     },
    

@@ -9,11 +9,12 @@ import Eater from '../Components/eater';
 import Location from '../Components/location';
 import Store from '../Components/store';
 import Personal from '../Components/personal';
-import eaterPersonal from '../Components/eaterPersonal1';
-import eaterPersona2 from '../Components/eaterPersonal2';
-import eaterPersona3 from '../Components/eaterPersonal3';
-import eaterPersona4 from '../Components/eaterPersonal4';
-import eaterPersona5 from '../Components/eaterPersonal5';
+import eaterPersonall from '../Components/eaterPersonal1';
+import eaterPersonal2 from '../Components/eaterPersonal2';
+import eaterPersonal3 from '../Components/eaterPersonal3';
+import eaterPersonal4 from '../Components/eaterPersonal4';
+import eaterPersonal5 from '../Components/eaterPersonal5';
+
 
 const App = () => {
 
@@ -47,29 +48,31 @@ const App = () => {
       </Tabs>
       <Scene title='吃貨個人地圖'>
         <Scene key="key4" hideNavBar icon={TabIcon}
-          component={eaterPersonal}
+          component={eaterPersonall}
         />
       </Scene>
       <Scene title='吃貨個人地圖'>
         <Scene key="key5" hideNavBar icon={TabIcon}
-          component={eaterPersona2}
+          component={eaterPersonal2}
         />
       </Scene>
       <Scene title='吃貨個人地圖'>
         <Scene key="key6" hideNavBar icon={TabIcon}
-          component={eaterPersona3}
+          component={eaterPersonal3}
         />
       </Scene>
       <Scene title='吃貨個人地圖'>
         <Scene key="key7" hideNavBar icon={TabIcon}
-          component={eaterPersona4}
+          component={eaterPersonal4}
         />
       </Scene>
       <Scene title='吃貨個人地圖'>
         <Scene key="key8" hideNavBar icon={TabIcon}
-          component={eaterPersona5}
+          component={eaterPersonal5}
         />
       </Scene>
+      
+        
     </Scene>
   </Router>
   );

@@ -24,7 +24,7 @@ import  Search  from 'react-native-search-box';
 
 var FAKE_DATA = [
     {one: 
-        [{authors: '小明', level: "吃貨", imageLinks: {thumbnail: 'https://ppt.cc/fVByIx@.jpg'}},
+        [{authors: 'apple', level: "吃貨", imageLinks: {thumbnail: 'https://ppt.cc/fVByIx@.jpg'}},
          {authors: '小美', level: "饕客", imageLinks: {thumbnail: 'https://ppt.cc/fta6Ex@.jpg'}},
          {authors: '小華', level: "食神", imageLinks: {thumbnail: 'https://ppt.cc/fZz28x@.jpg'}},
          {authors: '小叮噹', level: "饕客", imageLinks: {thumbnail: 'https://ppt.cc/fta6Ex@.jpg'}},
@@ -48,33 +48,14 @@ componentDidMount() {
         dataSource: this.state.dataSource.cloneWithRows(eaters)
     });
     }
- personal = ()=>{
-        console.log('user profile');
-        Actions.key4();     
-    }
-personal1 = ()=>{
-        console.log('user profile');
-        Actions.key5();     
-    }
-personal2 = ()=>{
-        console.log('user profile');
-        Actions.key6();     
-    }
-personal3 = ()=>{
-        console.log('user profile');
-        Actions.key7();     
-    }
-personal4 = ()=>{
-        console.log('user profile');
-        Actions.key8();     
-    }
+
   
  eat(eaters) {
        return (
             
         <View>
             
-            <TouchableOpacity onPress= {this.personal}  underlayColor='#dddddd'>
+            <TouchableOpacity onPress= {() => {Actions.key4()}}  underlayColor='#dddddd'>
                 <View style={styles.container}>
                     <Image
                         source={{uri: eaters.one[0].imageLinks.thumbnail}}
@@ -86,7 +67,7 @@ personal4 = ()=>{
                 </View> 
                 <View style={styles.separator} />
             </TouchableOpacity>
-            <TouchableOpacity onPress= {this.personal1}  underlayColor='#dddddd'>
+            <TouchableOpacity onPress= {() => {Actions.key5()}}  underlayColor='#dddddd'>
                 <View style={styles.container}>
                     <Image
                         source={{uri: eaters.one[1].imageLinks.thumbnail}}
@@ -98,7 +79,7 @@ personal4 = ()=>{
                 </View>
                 <View style={styles.separator} />
             </TouchableOpacity>
-            <TouchableOpacity onPress= {this.personal2}  underlayColor='#dddddd'>
+            <TouchableOpacity onPress= {() => {Actions.key6()}}  underlayColor='#dddddd'>
                 <View style={styles.container}>
                     <Image
                         source={{uri: eaters.one[2].imageLinks.thumbnail}}
@@ -110,7 +91,7 @@ personal4 = ()=>{
                 </View>
                 <View style={styles.separator} />
             </TouchableOpacity>
-            <TouchableOpacity onPress= {this.personal3}  underlayColor='#dddddd'>
+            <TouchableOpacity onPress= {() => {Actions.key7()}}  underlayColor='#dddddd'>
                 <View style={styles.container}>
                     <Image
                         source={{uri: eaters.one[3].imageLinks.thumbnail}}
@@ -122,7 +103,7 @@ personal4 = ()=>{
                 </View>
                 <View style={styles.separator} />
             </TouchableOpacity>
-            <TouchableOpacity onPress= {this.personal4}  underlayColor='#dddddd'>
+            <TouchableOpacity onPress= {() => {Actions.key8()}}  underlayColor='#dddddd'>
                 <View style={styles.container}>
                     <Image
                         source={{uri: eaters.one[4].imageLinks.thumbnail}}
