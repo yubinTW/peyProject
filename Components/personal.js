@@ -9,7 +9,8 @@ import {
     Alert,
     Image,
     Button,
-    ListView
+    ListView,
+    
   } from 'react-native';
   import { Actions } from 'react-native-router-flux';
   import Icon from 'react-native-vector-icons/Ionicons';
@@ -51,6 +52,18 @@ import {
         position: 'absolute',
         backgroundColor: 'rgba(200, 199, 199, 0.6)',
         borderRadius: 10
+    },
+    addstore:{
+        width:100,
+        height:40,
+        top:80,
+        right:150,
+        position: 'absolute',
+        //backgroundColor: '',
+        borderRadius: 10,
+        borderColor:'black',
+        borderWidth:1
+        
     },
     
     separator: {
@@ -131,6 +144,7 @@ import {
         alert('掰','title');
         Actions.login();
     }
+
     
     eat(user1) {
        return (
@@ -188,6 +202,7 @@ import {
                     onPress={this.logout}>
                         <Text style={{color:'rgba(255, 0, 0, 0.9)', alignContent:'center',textAlign:'center'}}>登出</Text>
                     </TouchableOpacity>
+
                     
                 </View>
                 <View style={styles.separator} />

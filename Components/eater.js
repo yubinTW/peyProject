@@ -27,22 +27,11 @@ var FAKE_DATA = [
     ]}];
 
 const datas = [
-    {
-        _name:'測試姓名',
-        level: '測試等級',
-        user_pic:'https://ppt.cc/fVByIx@.jpg',
-        comments: [
-            {title:'店標題', review:'評價',pic:'http://farm3.static.flickr.com/2612/4124807746_fb07a21c63_o.jpg'},
-            {title: '偈亭', review: "泡菜鍋推推",pic:'http://farm3.static.flickr.com/2612/4124807746_fb07a21c63_o.jpg'},
-            {title: '混HUN', review: "義大利麵不錯~",pic:'https://farm3.staticflickr.com/2941/15289696495_edf9b254a1_c.jpg'},
-            {title: '偈亭', review: "泡菜鍋推推",pic:'http://farm3.static.flickr.com/2612/4124807746_fb07a21c63_o.jpg'},
-            
-        ]
-    },
+    
     {
         _name:'apple',
         level: '吃貨',
-        user_pic:'https://ppt.cc/fta6Ex@.jpg',
+        user_pic:'https://ppt.cc/fVByIx@.jpg',
         comments: [
             {title: '偈亭', review: "泡菜鍋推推",pic: 'http://farm3.static.flickr.com/2612/4124807746_fb07a21c63_o.jpg'},
             {title: '混HUN', review: "義大利麵不錯~",pic: 'https://farm3.staticflickr.com/2941/15289696495_edf9b254a1_c.jpg'},
@@ -53,26 +42,41 @@ const datas = [
         level: '饕客',
         user_pic:'https://ppt.cc/fta6Ex@.jpg',
         comments: [
-            {title: '偈亭', review: "泡菜鍋推推",pic: 'http://farm3.static.flickr.com/2612/4124807746_fb07a21c63_o.jpg'},
-            {title: '混HUN', review: "義大利麵不錯~",pic: 'https://farm3.staticflickr.com/2941/15289696495_edf9b254a1_c.jpg'},
+            {tile: '咖啡鑽', review: "環境不錯,鬆餅好吃", pic: 'http://iphoto.ipeen.com.tw/photo/comment/0/9/0/cgm0d84defbb0d70c5f98d655e9d1e7906b289.jpg'},
+        {title: '偈亭', review: "假日人超多，很好吃",pic: 'http://i0.wp.com/pic.pimg.tw/zine1215/1433675918-118242265.jpg?ssl=1'},
+        {title: '混HUN', review: "環境很舒適餐點也不錯",pic: 'http://cfcdn4.azsg.opensnap.com/azsg/snapphoto/photo/LJ/H0YL/3D2U0V19D6D2C453FD5866sx.jpg'},
         ]
     },
     {
-        _name:'apple',
-        level: '吃貨',
-        user_pic:'https://ppt.cc/fta6Ex@.jpg',
+        _name:'小華',
+        level: '食神',
+        user_pic:'https://ppt.cc/fZz28x@.jpg',
         comments: [
-            {title: '偈亭', review: "泡菜鍋推推",pic: 'http://farm3.static.flickr.com/2612/4124807746_fb07a21c63_o.jpg'},
-            {title: '混HUN', review: "義大利麵不錯~",pic: 'https://farm3.staticflickr.com/2941/15289696495_edf9b254a1_c.jpg'},
+            {title: '朴大哥炸雞', review: "我覺得還好耶",pic: 'https://pic.pimg.tw/iko40623/1459602997-1779868072_n.jpg'},
+            {title: '咖啡鑽', review: "鬆餅超級好吃的!", pic: 'https://farm8.staticflickr.com/7580/15354674913_bed6472f34_o.jpg'},
+            {title: '宮原眼科', review: "冰淇淋超好ㄘ",pic: 'http://iphoto.ipeen.com.tw/photo/comment/9/1/5/cm20120711_140284_145225_d4a9357968bed3408ba15fe54428b11d299.jpg'},
+            {title: '偈亭', review: "我覺得很好吃唷~",pic: 'http://img.mari.tw/pixnet/2ef8b28c44f76f3885dc2f9cf72d3122.jpg'},
+            {title: '混HUN', review: "好好吃喔~",pic: 'https://farm1.static.flickr.com/695/22216602171_cbd033ccdb_b.jpg'},
         ]
     },
     {
-        _name:'apple',
-        level: '吃貨',
-        user_pic:'https://ppt.cc/fta6Ex@.jpg',
+        _name:'小叮噹',
+        level: '饕客',
+        user_pic:'https://ppt.cc/fta6Ex@.jp',
         comments: [
-            {title: '偈亭', review: "泡菜鍋推推",pic: 'http://farm3.static.flickr.com/2612/4124807746_fb07a21c63_o.jpg'},
-            {title: '混HUN', review: "義大利麵不錯~",pic: 'https://farm3.staticflickr.com/2941/15289696495_edf9b254a1_c.jpg'},
+            {title: '咖啡鑽', review: "環境很好不錯", pic: 'https://ppt.cc/ftgUKx'},
+            {title: '宮原眼科', review: "冰淇淋好吃，人超多的阿~~",pic: 'http://pic.pimg.tw/aova/1339605127-2546188700.jpg'},
+            {title: '偈亭', review: "便宜又好吃推推推",pic: 'https://ppt.cc/fCAvOx'},
+            {title: '混HUN', review: "推推推推推",pic: 'https://ppt.cc/fsb7Ax'},
+        ]
+    },
+    {
+        _name:'小夫',
+        level: '吃貨',
+        user_pic:'https://ppt.cc/fVByIx@.jpg',
+        comments: [
+            {title: '朴大哥炸雞', review: "還可以", pic: 'https://ppt.cc/frMC1x'},
+            
         ]
     },
 ]
