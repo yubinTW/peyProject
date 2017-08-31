@@ -10,12 +10,6 @@ import Location from '../Components/location';
 import Store from '../Components/store';
 import Personal from '../Components/personal';
 
-import eaterPersonal1 from '../Components/eaterPersonal1';
-import eaterPersonal2 from '../Components/eaterPersonal2';
-import eaterPersonal3 from '../Components/eaterPersonal3';
-import eaterPersonal4 from '../Components/eaterPersonal4';
-import eaterPersonal5 from '../Components/eaterPersonal5';
-
 import EaterPersonal from '../Components/eaterPersonal';
 
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -59,36 +53,6 @@ const App = () => {
         />
       </Scene>
       </Tabs>
-      <Scene>
-        <Scene key="key4" icon={TabIcon}
-          component={eaterPersonal1}
-          hideNavBar
-        />
-      </Scene>
-      <Scene>
-        <Scene key="key5" icon={TabIcon}
-          component={eaterPersonal2}
-          hideNavBar
-        />
-      </Scene>
-      <Scene>
-        <Scene key="key6" icon={TabIcon}
-          component={eaterPersonal3}
-          hideNavBar
-        />
-      </Scene>
-      <Scene>
-        <Scene key="key7" icon={TabIcon}
-          component={eaterPersonal4}
-          hideNavBar
-        />
-      </Scene>
-      <Scene>
-        <Scene key="key8"  icon={TabIcon}
-          component={eaterPersonal5}
-          hideNavBar
-        />
-      </Scene>
       <Scene key='storeinfo'
         component={StoreInfo}
         hideNavBar={false}
