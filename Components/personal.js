@@ -101,6 +101,18 @@ import { Actions } from 'react-native-router-flux';
        height:360
        
     },
+    addstore:{
+        width:100,
+        height:40,
+        top:80,
+        right:150,
+        position: 'absolute',
+        //backgroundColor: '',
+        borderRadius: 10,
+        borderColor:'black',
+        borderWidth:1
+        
+    },
   });
 
 

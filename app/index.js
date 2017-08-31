@@ -16,6 +16,8 @@ import eaterPersonal3 from '../Components/eaterPersonal3';
 import eaterPersonal4 from '../Components/eaterPersonal4';
 import eaterPersonal5 from '../Components/eaterPersonal5';
 
+import EaterPersonal from '../Components/eaterPersonal';
+
 import Icon from 'react-native-vector-icons/Ionicons';
 import StoreInfo from '../Components/storeinfo';
 
@@ -89,6 +91,10 @@ const App = () => {
       </Scene>
       <Scene key='storeinfo'
         component={StoreInfo}
+        hideNavBar={false}
+      />
+      <Scene key='eaterpersonal'
+        component = {EaterPersonal}
         hideNavBar={false}
       />
     </Scene>

@@ -12,7 +12,8 @@ import {
     ListView
   } from 'react-native';
   import { Actions } from 'react-native-router-flux';
-  import eater from './eater'
+  import eater from './eater';
+  import Comment from './comment.js';
 
 
   var FAKE_DATA = [
@@ -56,6 +57,11 @@ import {
        return (
             <View>
 
+                <Comment 
+                    pic='http://farm3.static.flickr.com/2612/4124807746_fb07a21c63_o.jpg'
+                    title='偈亭'
+                    review='泡菜鍋推推'
+                />
                 <TouchableOpacity >
                     <View style={styles.container}>
                         <Image 

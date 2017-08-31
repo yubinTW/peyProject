@@ -13,11 +13,6 @@ import {
     TouchableHighlight,
   } from 'react-native';
 import { Actions } from 'react-native-router-flux';
-import eaterPersonal from './eaterPersonal1';
-import eaterPersona2 from './eaterPersonal2';
-import eaterPersona3 from './eaterPersonal3';
-import eaterPersona4 from './eaterPersonal4';
-import eaterPersona5 from './eaterPersonal5';
 import  Search  from 'react-native-search-box';
 
 
@@ -31,6 +26,56 @@ var FAKE_DATA = [
          {authors: '小夫', level: "吃貨", imageLinks: {thumbnail: 'https://ppt.cc/fVByIx@.jpg'}}
     ]}];
 
+const datas = [
+    {
+        _name:'測試姓名',
+        level: '測試等級',
+        user_pic:'https://ppt.cc/fVByIx@.jpg',
+        comments: [
+            {title:'店標題', review:'評價',pic:'http://farm3.static.flickr.com/2612/4124807746_fb07a21c63_o.jpg'},
+            {title: '偈亭', review: "泡菜鍋推推",pic:'http://farm3.static.flickr.com/2612/4124807746_fb07a21c63_o.jpg'},
+            {title: '混HUN', review: "義大利麵不錯~",pic:'https://farm3.staticflickr.com/2941/15289696495_edf9b254a1_c.jpg'},
+            {title: '偈亭', review: "泡菜鍋推推",pic:'http://farm3.static.flickr.com/2612/4124807746_fb07a21c63_o.jpg'},
+            
+        ]
+    },
+    {
+        _name:'apple',
+        level: '吃貨',
+        user_pic:'https://ppt.cc/fta6Ex@.jpg',
+        comments: [
+            {title: '偈亭', review: "泡菜鍋推推",pic: 'http://farm3.static.flickr.com/2612/4124807746_fb07a21c63_o.jpg'},
+            {title: '混HUN', review: "義大利麵不錯~",pic: 'https://farm3.staticflickr.com/2941/15289696495_edf9b254a1_c.jpg'},
+        ]
+    },
+    {
+        _name:'小美',
+        level: '饕客',
+        user_pic:'https://ppt.cc/fta6Ex@.jpg',
+        comments: [
+            {title: '偈亭', review: "泡菜鍋推推",pic: 'http://farm3.static.flickr.com/2612/4124807746_fb07a21c63_o.jpg'},
+            {title: '混HUN', review: "義大利麵不錯~",pic: 'https://farm3.staticflickr.com/2941/15289696495_edf9b254a1_c.jpg'},
+        ]
+    },
+    {
+        _name:'apple',
+        level: '吃貨',
+        user_pic:'https://ppt.cc/fta6Ex@.jpg',
+        comments: [
+            {title: '偈亭', review: "泡菜鍋推推",pic: 'http://farm3.static.flickr.com/2612/4124807746_fb07a21c63_o.jpg'},
+            {title: '混HUN', review: "義大利麵不錯~",pic: 'https://farm3.staticflickr.com/2941/15289696495_edf9b254a1_c.jpg'},
+        ]
+    },
+    {
+        _name:'apple',
+        level: '吃貨',
+        user_pic:'https://ppt.cc/fta6Ex@.jpg',
+        comments: [
+            {title: '偈亭', review: "泡菜鍋推推",pic: 'http://farm3.static.flickr.com/2612/4124807746_fb07a21c63_o.jpg'},
+            {title: '混HUN', review: "義大利麵不錯~",pic: 'https://farm3.staticflickr.com/2941/15289696495_edf9b254a1_c.jpg'},
+        ]
+    },
+]
    
 export default class Eater extends React.Component{
    
@@ -49,72 +94,29 @@ componentDidMount() {
     });
     }
 
+showEaterPersonal(e,obj){
+    Actions.eaterpersonal(obj);
+}
   
  eat(eaters) {
        return (
             
         <View>
-            
-            <TouchableOpacity onPress= {() => {Actions.key4()}}  underlayColor='#dddddd'>
-                <View style={styles.container}>
-                    <Image
-                        source={{uri: eaters.one[0].imageLinks.thumbnail}}
-                        style={styles.thumbnail} />
-                    <View style={styles.rightContainer}>
-                        <Text style={styles.title}>{eaters.one[0].authors}</Text>
-                        <Text style={styles.author}>{eaters.one[0].level}</Text>
-                    </View>         
-                </View> 
-                <View style={styles.separator} />
-            </TouchableOpacity>
-            <TouchableOpacity onPress= {() => {Actions.key5()}}  underlayColor='#dddddd'>
-                <View style={styles.container}>
-                    <Image
-                        source={{uri: eaters.one[1].imageLinks.thumbnail}}
-                        style={styles.thumbnail} />
-                    <View style={styles.rightContainer}>
-                        <Text style={styles.title}>{eaters.one[1].authors}</Text>
-                        <Text style={styles.author}>{eaters.one[1].level}</Text>
-                    </View>         
-                </View>
-                <View style={styles.separator} />
-            </TouchableOpacity>
-            <TouchableOpacity onPress= {() => {Actions.key6()}}  underlayColor='#dddddd'>
-                <View style={styles.container}>
-                    <Image
-                        source={{uri: eaters.one[2].imageLinks.thumbnail}}
-                        style={styles.thumbnail} />
-                    <View style={styles.rightContainer}>
-                        <Text style={styles.title}>{eaters.one[2].authors}</Text>
-                        <Text style={styles.author}>{eaters.one[2].level}</Text>
-                    </View>         
-                </View>
-                <View style={styles.separator} />
-            </TouchableOpacity>
-            <TouchableOpacity onPress= {() => {Actions.key7()}}  underlayColor='#dddddd'>
-                <View style={styles.container}>
-                    <Image
-                        source={{uri: eaters.one[3].imageLinks.thumbnail}}
-                        style={styles.thumbnail} />
-                    <View style={styles.rightContainer}>
-                        <Text style={styles.title}>{eaters.one[3].authors}</Text>
-                        <Text style={styles.author}>{eaters.one[3].level}</Text>
-                    </View>         
-                </View>
-                <View style={styles.separator} />
-            </TouchableOpacity>
-            <TouchableOpacity onPress= {() => {Actions.key8()}}  underlayColor='#dddddd'>
-                <View style={styles.container}>
-                    <Image
-                        source={{uri: eaters.one[4].imageLinks.thumbnail}}
-                        style={styles.thumbnail} />
-                    <View style={styles.rightContainer}>
-                        <Text style={styles.title}>{eaters.one[4].authors}</Text>
-                        <Text style={styles.author}>{eaters.one[4].level}</Text>
-                    </View>         
-                </View>
-                <View style={styles.separator} />
-            </TouchableOpacity>
+            {datas.map((user,i)=>(
+                <TouchableOpacity key={i} onPress= {e =>this.showEaterPersonal(e,user)}  underlayColor='#dddddd'>
+                    
+                    <View style={styles.container}>
+                        <Image
+                            source={{uri: user.user_pic}}
+                            style={styles.thumbnail} />
+                        <View style={styles.rightContainer}>
+                            <Text style={styles.title}>{user._name}</Text>
+                            <Text style={styles.author}>{user.level}</Text>
+                        </View>         
+                    </View> 
+                    <View style={styles.separator} />
+                </TouchableOpacity>
+            ))}
         </View>
                 
             

@@ -58,12 +58,12 @@ export default class Login extends React.Component{
                     onChangeText={(text) => this.setState({text})}
                     placeholder="email"
                     />
-                    <View style={styles.separator} />
+                    
                     <TextInput 
                     onChangeText={(text) => this.setState({text})}
                     placeholder="password"
                     />
-                    <View style={styles.separator} />
+                    
                     <View style={{height:50}} />
                     <Button
                         style={{borderRadius:30, borderWidth:1}}
