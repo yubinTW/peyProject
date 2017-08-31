@@ -9,9 +9,10 @@ import {
     Alert,
     Image,
     Button,
-    ListView
+    ListView,
+    
   } from 'react-native';
-  import { Actions } from 'react-native-router-flux';
+import { Actions } from 'react-native-router-flux';
 
  var FAKE_DATA = [
     {one: [ {authors: '朴大哥炸雞', review: "我覺得還好耶",imageLinks: {thumbnail: 'https://pic.pimg.tw/iko40623/1459602997-1779868072_n.jpg'}},
@@ -49,6 +50,18 @@ import {
         position: 'absolute',
         backgroundColor: 'rgba(200, 199, 199, 0.6)',
         borderRadius: 10
+    },
+    addstore:{
+        width:100,
+        height:40,
+        top:80,
+        right:150,
+        position: 'absolute',
+        //backgroundColor: '',
+        borderRadius: 10,
+        borderColor:'black',
+        borderWidth:1
+        
     },
     
     separator: {
@@ -124,6 +137,7 @@ import {
         alert('掰','title');
         Actions.login();
     }
+
     
     eat(user1) {
        return (
@@ -136,7 +150,8 @@ import {
                         <View style={styles.rightContainer}>
                             <Text style={styles.title}>{user1.one[0].authors}</Text>
                             <Text style={styles.author}>{user1.one[0].review}</Text>
-                        </View>         
+                        </View>   
+                              
                     </View> 
                     <View style={styles.separator} />
                 </TouchableOpacity>
@@ -212,6 +227,7 @@ import {
                     onPress={this.logout}>
                         <Text style={{color:'rgba(255, 0, 0, 0.9)', alignContent:'center',textAlign:'center'}}>登出</Text>
                     </TouchableOpacity>
+
                     
                 </View>
                 <View style={styles.separator} />
