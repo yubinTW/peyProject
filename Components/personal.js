@@ -12,6 +12,8 @@ import {
     ListView
   } from 'react-native';
   import { Actions } from 'react-native-router-flux';
+  import Icon from 'react-native-vector-icons/Ionicons';
+
 
  var FAKE_DATA = [
     {one: [ {authors: '朴大哥炸雞', review: "我覺得還好耶",imageLinks: {thumbnail: 'https://pic.pimg.tw/iko40623/1459602997-1779868072_n.jpg'}},
@@ -94,11 +96,9 @@ import {
         top:80,
         right:150,
         position: 'absolute',
-        //backgroundColor: '',
         borderRadius: 10,
         borderColor:'black',
         borderWidth:1
-        
     },
   });
 
@@ -110,7 +110,14 @@ import {
        this.state = {
            dataSource: new ListView.DataSource({
                rowHasChanged: (row1, row2) => row1 !== row2
-           })
+           }),
+           datas : [
+                {authors: '朴大哥炸雞', review: "我覺得還好耶",pic: 'https://pic.pimg.tw/iko40623/1459602997-1779868072_n.jpg'},
+                {authors: '咖啡鑽', review: "鬆餅超級好吃的!", pic: 'https://farm8.staticflickr.com/7580/15354674913_bed6472f34_o.jpg'},
+                {authors: '宮原眼科', review: "冰淇淋超好ㄘ",pic: 'http://iphoto.ipeen.com.tw/photo/comment/9/1/5/cm20120711_140284_145225_d4a9357968bed3408ba15fe54428b11d299.jpg'},
+                {authors: '偈亭', review: "我覺得很好吃唷~",pic: 'http://img.mari.tw/pixnet/2ef8b28c44f76f3885dc2f9cf72d3122.jpg'},
+                {authors: '混HUN', review: "好好吃喔~",pic: 'https://farm1.static.flickr.com/695/22216602171_cbd033ccdb_b.jpg'},
+            ]
        };
     }
     componentDidMount() {
@@ -128,66 +135,33 @@ import {
     eat(user1) {
        return (
            <View>
-                <TouchableOpacity >
-                    <View style={styles.container}>
-                        <Image 
-                            source={{uri: user1.one[0].imageLinks.thumbnail}}
-                            style={styles.thumbnail} />
-                        <View style={styles.rightContainer}>
-                            <Text style={styles.title}>{user1.one[0].authors}</Text>
-                            <Text style={styles.author}>{user1.one[0].review}</Text>
-                        </View>         
-                    </View> 
-                    <View style={styles.separator} />
-                </TouchableOpacity>
-                <TouchableOpacity >
-                    <View style={styles.container}>
-                        <Image 
-                            source={{uri: user1.one[1].imageLinks.thumbnail}}
-                            style={styles.thumbnail} />
-                        <View style={styles.rightContainer}>
-                            <Text style={styles.title}>{user1.one[1].authors}</Text>
-                            <Text style={styles.author}>{user1.one[1].review}</Text>
-                        </View>         
-                    </View> 
-                    <View style={styles.separator} />
-                </TouchableOpacity>
-                <TouchableOpacity >
-                    <View style={styles.container}>
-                        <Image 
-                            source={{uri: user1.one[2].imageLinks.thumbnail}}
-                            style={styles.thumbnail} />
-                        <View style={styles.rightContainer}>
-                            <Text style={styles.title}>{user1.one[2].authors}</Text>
-                            <Text style={styles.author}>{user1.one[2].review}</Text>
-                        </View>         
-                    </View> 
-                    <View style={styles.separator} />
-                </TouchableOpacity>
-                <TouchableOpacity >
-                    <View style={styles.container}>
-                        <Image 
-                            source={{uri: user1.one[3].imageLinks.thumbnail}}
-                            style={styles.thumbnail} />
-                        <View style={styles.rightContainer}>
-                            <Text style={styles.title}>{user1.one[3].authors}</Text>
-                            <Text style={styles.author}>{user1.one[3].review}</Text>
-                        </View>         
-                    </View> 
-                    <View style={styles.separator} />
-                </TouchableOpacity>
-              <TouchableOpacity >
-                    <View style={styles.container}>
-                        <Image 
-                            source={{uri: user1.one[4].imageLinks.thumbnail}}
-                            style={styles.thumbnail} />
-                        <View style={styles.rightContainer}>
-                            <Text style={styles.title}>{user1.one[4].authors}</Text>
-                            <Text style={styles.author}>{user1.one[4].review}</Text>
-                        </View>         
-                    </View> 
-                    <View style={styles.separator} />
-                </TouchableOpacity>
+                {this.state.datas.map((item,i)=>(
+                    <TouchableOpacity key={i}>
+                        <View style={styles.container}>
+                            <Image 
+                                source={{uri: item.pic}}
+                                style={styles.thumbnail} />
+                            <View style={styles.rightContainer}>
+                                <Text style={styles.title}>{item.authors}</Text>
+                                <Text style={styles.author}>{item.review}</Text>
+                            </View>  
+                            <View>
+                                <TouchableOpacity
+                                    onPress={()=>alert('修改修改...')}
+                                >
+                                    <Icon name={'ios-create'} size={30} color='green' style={{marginRight:20}}/>
+                                </TouchableOpacity>
+                                <TouchableOpacity
+                                    onPress={()=>alert('刪除刪除...')}  
+                                >
+                                    <Icon name={'ios-trash'} size={30} color='red'/>
+                                </TouchableOpacity>
+                            </View>       
+                        </View> 
+                        <View style={styles.separator} />
+                    </TouchableOpacity>
+                ))}
+                
             </View>
        );
     }
@@ -203,7 +177,9 @@ import {
                     <Text
                         style={styles.personalDetail}
                     >食神    小明</Text>
-                    <TouchableOpacity style={styles.addstore} >
+                    <TouchableOpacity style={styles.addstore} 
+                        onPress={()=>{alert('新增新增...')}}    
+                    >
                         < Text style={{ fontWeight:'bold',lineHeight:30,color:'black', alignContent:'center',textAlign:'center',justifyContent:'center'}}>新增口袋名單</Text>
                         
                     </TouchableOpacity>
