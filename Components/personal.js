@@ -88,6 +88,18 @@ import {
        height:360
        
     },
+    addstore:{
+        width:100,
+        height:40,
+        top:80,
+        right:150,
+        position: 'absolute',
+        //backgroundColor: '',
+        borderRadius: 10,
+        borderColor:'black',
+        borderWidth:1
+        
+    },
   });
 
 
@@ -191,6 +203,10 @@ import {
                     <Text
                         style={styles.personalDetail}
                     >食神    小明</Text>
+                    <TouchableOpacity style={styles.addstore} >
+                        < Text style={{ fontWeight:'bold',lineHeight:30,color:'black', alignContent:'center',textAlign:'center',justifyContent:'center'}}>新增口袋名單</Text>
+                        
+                    </TouchableOpacity>
                     <TouchableOpacity
                     style={styles.logoutButton}
                     onPress={this.logout}>
